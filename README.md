@@ -111,7 +111,7 @@ is properly installed on your system and available on the PATH.", которую
         for i in $(seq 1 5); do mount /dev/md0p$i /raid/part$i; done
 
 Так же в данном репозитории присутствует скрипт, который, при выполнении в vagrant, будет сам собирать raid, добавлять в автозагрузку, ломать его, чинить и создавать на нём партиции.
-При выполнении данного домашнего задания я пользовался следующими ресурсами: 
+При выполнении данного домашнего задания я пользовался следующими ресурсами:<br>
 https://www.ibm.com/developerworks/ru/library/l-soft-raid/index.html<br>
 https://ru.wikibooks.org/wiki/Mdadm#%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8_%D0%BE_RAID-%D0%B4%D0%B8%D1%81%D0%BA%D0%B5_%D0%B8_%D0%B5%D0%B3%D0%BE_%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B0%D1%85<br>
 https://gist.github.com/Jekins/2bf2d0638163f1294637<br>
