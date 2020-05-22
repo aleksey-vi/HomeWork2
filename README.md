@@ -1,14 +1,14 @@
 # HomeWork2
 ●Установите VirtualBox на локальную машину.
 ●Установите сам Vagrant: Переходим на https://www.vagrantup.com/downloads.html выбираем соответствующую версию. В данном случае Debian 64-bit и версия 2.2.6. Копируем ссылку и в консоли выполняем:
-'''
-curl -O https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.deb && sudo dpkg -i vagrant_2.2.6_x86_64.deb
-'''
+
+    curl -O https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.deb && sudo dpkg -i vagrant_2.2.6_x86_64.deb
+
 После успешного окончания будет установлен Vagrant.
 Проверить установку можно командой:
-'''
-vagrant -v
-'''
+
+    vagrant -v
+
 ## Vagrant
 Начальный стенд можно взять отсюда: https://github.com/erlong15/otus-linuxВ принципе на нем уже можно собрать любой RAID.
 В моем репозитории присутствует отредактированный Vagrant-файл, с помощью которого можно собрать любой рейд, для каждого дополнительного диска необходимо добавить в Vagrant-файл следующий блок:
