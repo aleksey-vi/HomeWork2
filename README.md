@@ -1,6 +1,5 @@
 # HomeWork2
-●Установите VirtualBox на локальную машину.
-●Установите сам Vagrant: Переходим на https://www.vagrantup.com/downloads.html выбираем соответствующую версию. В данном случае Debian 64-bit и версия 2.2.6. Копируем ссылку и в консоли выполняем:
+Установите VirtualBox на локальную машину. Установите сам Vagrant: Переходим на https://www.vagrantup.com/downloads.html выбираем соответствующую версию. В данном случае Debian 64-bit и версия 2.2.6. Копируем ссылку и в консоли выполняем:
 
     curl -O https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.deb && sudo dpkg -i vagrant_2.2.6_x86_64.deb
 
@@ -11,7 +10,7 @@
 
 ## Vagrant
 
-Начальный стенд можно взять отсюда: https://github.com/erlong15/otus-linuxВ принципе на нем уже можно собрать любой RAID.
+Начальный стенд можно взять отсюда: https://github.com/erlong15/otus-linux В принципе на нем уже можно собрать любой RAID.
 В моем репозитории присутствует отредактированный Vagrant-файл, с помощью которого можно собрать любой рейд, для каждого дополнительного диска необходимо добавить в Vagrant-файл следующий блок:
 
         :sata6 => { :dfile => './sata6.vdi', # Путь, по которому будет создан файл диска 
@@ -20,7 +19,7 @@
         },
 
 Обязательно увеличив номер порта и изменив имя файла диска, чтобы исключить дублирование.
-При редактировании Vagrant файла у меня была ошибка ""rsync" could not be found on your PATH. Make sure that rsync
+При редактировании скаченного Vagrant файла у меня была ошибка ""rsync" could not be found on your PATH. Make sure that rsync
 is properly installed on your system and available on the PATH.", которую я исправил пользуясь руководством по ссылке https://qna.habr.com/q/271364, где было необходимо установить плагин vagrant-vbguest:
 
         vagrant plugin install vagrant-vbguest
@@ -30,7 +29,7 @@ is properly installed on your system and available on the PATH.", которую
         config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 
 Далее подразумеваем, что мы добавили в Vagrantfile 5-ый диск.Добавить в Vagrantfile еще дисков
-Далее нужно определиться какого уровня RAID будем собирать. Для это посмотрим какие блочные устройства у нас есть и исходя из их кол-во, размера и поставленной задачи определимся. Я это делал командой lsblk
+Далее нужно определиться какого уровня RAID будем собирать. Для это посмотрим, какие блочные устройства у нас есть и исходя из их кол-во, размера и поставленной задачи определимся. Я это делал командой lsblk
 
 ## Создание Raid5
 
